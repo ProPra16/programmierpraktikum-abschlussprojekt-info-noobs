@@ -12,8 +12,8 @@ import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 public class Gui extends Application {
-    private static final int WIDTH = 1200;
-    private static final int HEIGHT = 1000;
+    private static final int WIDTH = 800;
+    private static final int HEIGHT = 600;
     static Pane root = new Pane();
     private Scene scene;
         
@@ -25,8 +25,8 @@ public class Gui extends Application {
       TextArea input = new TextArea();
       input.setPromptText("Your Code here:");
       input.setPrefColumnCount(50);
-      input.setPrefWidth(900);
-      input.setPrefHeight(900);
+      input.setPrefWidth(WIDTH-WIDTH/10);
+      input.setPrefHeight(HEIGHT-HEIGHT/10);
       
       input.getText();
       
@@ -38,8 +38,8 @@ public class Gui extends Application {
       next.setText("Next");
 
       //Button Position
-      next.setLayoutX(WIDTH-100);
-      next.setLayoutY(HEIGHT-100);
+      next.setLayoutX(WIDTH-WIDTH/10);
+      next.setLayoutY(HEIGHT-HEIGHT/10);
       
       next.setOnAction(new EventHandler<ActionEvent>() {
         @Override
