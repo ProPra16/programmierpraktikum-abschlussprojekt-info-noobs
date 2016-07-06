@@ -1,0 +1,6 @@
+1. 
+In dem ersten Programm soll es um das Erstellen einer Klasse gehen: 
+a)	Legen Sie die Klasse „Welcome“ an und geben Sie in der Shell die Worte 		„Hallo.Mein Name ist (Name)
+b) 	Fügen Sie eine Methode „getName“ hinzu, die den Namen des Nutzers einlesen 		soll und diesen als Wert weitergeben soll. 
+c)	Nun soll in der Shell der Eingabename angezeigt werden: „Hallo. Mein Name ist 	Max Mustermann.
+d) 	Lassen Sie den Nutzer nun mittels einer zweiten Methode „getAge“ das Alter e	eingeben und auch wieder zurückgeben. Erweitern Sie c) um „getAge“.
