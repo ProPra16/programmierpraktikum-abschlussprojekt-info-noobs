@@ -5,6 +5,7 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.Parent;
+import javafx.scene.text.Text;
 import javafx.scene.layout.Pane;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
@@ -12,8 +13,8 @@ import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 public class Gui extends Application {
-    private static final int WIDTH = 1200;
-    private static final int HEIGHT = 1000;
+    private static final int WIDTH = 1000;
+    private static final int HEIGHT = 800;
     static Pane root = new Pane();
     private Scene scene;
         
@@ -22,24 +23,22 @@ public class Gui extends Application {
       root.getChildren().clear();
       
       //Text
+      Text modus = new Text(WIDTH-WIDTH/6,20, "Aktueller Modus:");
+      modus.setId("modus0");
+      
+      //TextArea
       TextArea input = new TextArea();
       input.setPromptText("Your Code here:");
-      input.setPrefColumnCount(50);
-      input.setPrefWidth(900);
-      input.setPrefHeight(900);
+      input.setPrefWidth(WIDTH-WIDTH/6);
+      input.setPrefHeight(HEIGHT-HEIGHT/6);
       
-      input.getText();
-      
+      //TextArea-Ende
       
       //Erzeuge Button
       Button next = new Button();
-
-      //Button Texte
       next.setText("Next");
-
-      //Button Position
-      next.setLayoutX(WIDTH-100);
-      next.setLayoutY(HEIGHT-100);
+      next.setLayoutX(WIDTH-WIDTH/6);
+      next.setLayoutY(HEIGHT-HEIGHT/6);
       
       next.setOnAction(new EventHandler<ActionEvent>() {
         @Override
@@ -51,6 +50,7 @@ public class Gui extends Application {
       
       root.getChildren().add(next);
       root.getChildren().add(input);
+      root.getChildren().add(modus);
       root.setPrefSize(WIDTH, HEIGHT);
       
       return root;
